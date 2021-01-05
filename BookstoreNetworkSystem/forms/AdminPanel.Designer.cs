@@ -31,10 +31,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.controlPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.logOutButton = new System.Windows.Forms.Button();
+            this.binderButton = new System.Windows.Forms.Button();
             this.authorsButton = new System.Windows.Forms.Button();
             this.bookStoresButton = new System.Windows.Forms.Button();
             this.booksButton = new System.Windows.Forms.Button();
-            this.controlPanel = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +45,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(75)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.logOutButton);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(265, 0);
@@ -63,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.binderButton);
             this.panel1.Controls.Add(this.authorsButton);
             this.panel1.Controls.Add(this.bookStoresButton);
             this.panel1.Controls.Add(this.booksButton);
@@ -71,6 +77,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 628);
             this.panel1.TabIndex = 3;
+            // 
+            // controlPanel
+            // 
+            this.controlPanel.Location = new System.Drawing.Point(265, 59);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(1033, 569);
+            this.controlPanel.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::BookstoreNetworkSystem.Properties.Resources.power_button;
+            this.button1.Location = new System.Drawing.Point(912, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 54);
+            this.button1.TabIndex = 7;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.FlatAppearance.BorderSize = 0;
+            this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logOutButton.ForeColor = System.Drawing.Color.White;
+            this.logOutButton.Image = global::BookstoreNetworkSystem.Properties.Resources.logout;
+            this.logOutButton.Location = new System.Drawing.Point(787, 2);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(119, 54);
+            this.logOutButton.TabIndex = 6;
+            this.logOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
+            // binderButton
+            // 
+            this.binderButton.FlatAppearance.BorderSize = 0;
+            this.binderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.binderButton.ForeColor = System.Drawing.Color.White;
+            this.binderButton.Image = global::BookstoreNetworkSystem.Properties.Resources.arrows;
+            this.binderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.binderButton.Location = new System.Drawing.Point(12, 298);
+            this.binderButton.Name = "binderButton";
+            this.binderButton.Size = new System.Drawing.Size(253, 73);
+            this.binderButton.TabIndex = 5;
+            this.binderButton.Text = "    Прив\'язка";
+            this.binderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.binderButton.UseVisualStyleBackColor = true;
+            this.binderButton.Click += new System.EventHandler(this.binderButton_Click);
             // 
             // authorsButton
             // 
@@ -124,13 +183,6 @@
             this.booksButton.UseVisualStyleBackColor = true;
             this.booksButton.Click += new System.EventHandler(this.booksButton_Click);
             // 
-            // controlPanel
-            // 
-            this.controlPanel.Location = new System.Drawing.Point(265, 59);
-            this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(1033, 569);
-            this.controlPanel.TabIndex = 5;
-            // 
             // AdminPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -159,5 +211,8 @@
         private System.Windows.Forms.Button booksButton;
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.Button authorsButton;
+        private System.Windows.Forms.Button binderButton;
+        private System.Windows.Forms.Button logOutButton;
+        private System.Windows.Forms.Button button1;
     }
 }

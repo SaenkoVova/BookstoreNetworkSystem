@@ -48,5 +48,18 @@ namespace BookstoreNetworkSystem.forms
             var ucabs = new UC_AdminBookStores();
             AddControlsToPanel(ucabs);
         }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            Close();
+        }
+
+        private void binderButton_Click(object sender, EventArgs e)
+        {
+            var ucabb = new UC_AdminBookBinder();
+            AddControlsToPanel(ucabb);
+        }
     }
 }
